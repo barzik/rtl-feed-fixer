@@ -56,6 +56,11 @@ published after the plugin activation.
 
 == Changelog ==
 
-
 = 1.0 =
 * Initial version
+* automated testing
+
+== Testing ==
+This plugin includes automated testing in standard WordPress develop environment.
+To run the test, please make sure that the plugin will be under WordPress develop plugins branch or make sure that
+export WP_DEVELOP_DIR="/path/to/wordpress/develop/"
