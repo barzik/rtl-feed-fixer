@@ -1,6 +1,6 @@
 <?php
 /**
- * The WordPress WP Tutorial maker
+ * RTL RSS Feed Fixer
  *
  * @package   rtl-feed-fixer
  * @author    Ran Bar-Zik <ran@bar-zik.com>

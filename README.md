@@ -1,4 +1,4 @@
-=== wp-tutorial-maker ===
+=== RSS Feed Fixer ===
 Contributors: barzik
 Tags: rtl, rss, feed,
 Requires at least: 3.5.1

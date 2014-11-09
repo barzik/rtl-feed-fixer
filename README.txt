@@ -1,6 +1,6 @@
-=== wp-tutorial-maker ===
+=== RTL Feed Fixer ===
 Contributors: barzik
-Tags: rtl, rss, feed,
+Tags: rtl, rss, feed, feedly, fix, rtl support
 Requires at least: 3.5.1
 Tested up to: 4.0
 Stable tag: trunk
@@ -21,6 +21,8 @@ and will be aligned to the right.
 This plugin does not have admin interface and it is very easy to use. Please pay attention that feedly and other RSS 
 readers sometime cache the feeds, so the it is possible that the changes will be seen in the posts that are being 
 published after the plugin activation.
+
+The plugin is also available at GitHub: https://github.com/barzik/rtl-feed-fixer
 
 == Installation ==
 
