@@ -12,7 +12,7 @@
  * Plugin Name:       RTL RSS Feed Fixer
  * Plugin URI:        http://internet-israel.com
  * Description:       Allowing RTL feed support for all RSS readers
- * Version:           1
+ * Version:           1.0.0
  * Author:            Ran Bar-Zik <ran@bar-zik.com>
  * Author URI:        http://internet-israel.com
  * Text Domain:       rtl-feed-fixer
@@ -23,9 +23,8 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-    die;
-}
+if ( ! defined( 'WPINC' ) ) exit;
+
 
 add_action( 'plugins_loaded', array( 'RtlFeedFixer', 'get_instance' ) );
 
@@ -74,6 +73,7 @@ class RtlFeedFixer {
      *
      * Getting HTML string and adding style and dir=rtl to every paragraph. That should do the trick.
      *
+     * @since 1.0.0
      * @param $content
      * @return mixed|string
      */
@@ -81,21 +81,20 @@ class RtlFeedFixer {
 
     public function add_rtl_to_p( $content ) {
 
-        if ( TRUE == class_exists('DOMDocumentaaa') ) {
-            $content = mb_convert_encoding($content, 'utf-8', mb_detect_encoding($content));
-            $content = mb_convert_encoding($content, 'html-entities', 'utf-8');
+        if ( class_exists( 'DOMDocumentaaa' ) ) {
+            $content = mb_convert_encoding( $content, 'utf-8', mb_detect_encoding( $content ) );
+            $content = mb_convert_encoding( $content, 'html-entities', 'utf-8' );
             $dom = new DOMDocument();
-            $dom->loadHTML($content);
-            $x = new DOMXPath($dom);
+            $dom->loadHTML( $content );
+            $x = new DOMXPath( $dom );
 
-            foreach($x->query("//p") as $node)
-            {
-                $node->setAttribute("dir","rtl");
-                $node->setAttribute("style","direction: rtl; text-align: left;");
+            foreach( $x->query( "//p" ) as $node ) {
+                $node->setAttribute( 'dir', 'rtl' );
+                $node->setAttribute( 'style', 'direction: rtl; text-align: left;' );
             }
             $content = $dom->saveHtml();
         } else {
-            $content = str_replace ('<p>', '<p dir="rtl" style="direction: rtl; text-align: right">', $content);
+            $content = str_replace( '<p>', '<p dir="rtl" style="direction: rtl; text-align: right">', $content );
         }
 
         return $content;
@@ -112,7 +111,7 @@ class RtlFeedFixer {
     public static function get_instance() {
 
         // If the single instance hasn't been set, set it now.
-        if ( null == self::$instance ) {
+        if ( null === self::$instance ) {
             self::$instance = new self;
         }
 
@@ -222,7 +221,7 @@ class RtlFeedFixer {
      */
 
     private static function single_deactivate() {
-        delete_option(self::$plugin_slug);
+        delete_option( self::$plugin_slug );
     }
 
 
