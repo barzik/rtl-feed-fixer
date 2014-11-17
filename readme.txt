@@ -58,6 +58,11 @@ The plugin is also available at GitHub: https://github.com/barzik/rtl-feed-fixer
 
 == Changelog ==
 
+= 1.0.1 =
+* fixed typo class name in add_rtl_to_p
+* fixed md file syntax for GitHub
+* removed unnecessary LICENSE file
+
 = 1.0 =
 * Initial version
 * automated testing
