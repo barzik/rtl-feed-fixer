@@ -81,7 +81,7 @@ class RtlFeedFixer {
 
     public function add_rtl_to_p( $content ) {
 
-        if ( class_exists( 'DOMDocumentaaa' ) ) {
+        if ( class_exists( 'DOMDocument' ) ) {
             $content = mb_convert_encoding( $content, 'utf-8', mb_detect_encoding( $content ) );
             $content = mb_convert_encoding( $content, 'html-entities', 'utf-8' );
             $dom = new DOMDocument();
@@ -90,7 +90,7 @@ class RtlFeedFixer {
 
             foreach( $x->query( "//p" ) as $node ) {
                 $node->setAttribute( 'dir', 'rtl' );
-                $node->setAttribute( 'style', 'direction: rtl; text-align: left;' );
+                $node->setAttribute( 'style', 'direction: rtl; text-align: right;' );
             }
             $content = $dom->saveHtml();
         } else {
