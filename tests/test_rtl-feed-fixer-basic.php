@@ -21,7 +21,7 @@ class WP_Test_WPnotice_Plugin_Tests extends WP_UnitTestCase {
         $this->excerpt_only = get_option('rss_use_excerpt');
 
         $this->dummy_text_ltr = '<p>Lorem ipsum <i>text</i> will be shown here <i>this</i> is the first paragraph</p>';
-        $this->dummy_text_rtl = '<p dir="rtl" style="direction: rtl; text-align: right">Lorem ipsum <i>text</i> will be shown here <i>this</i> is the first paragraph</p>';
+        $this->dummy_text_rtl = '<p dir="rtl" style="direction: rtl; text-align: right;">Lorem ipsum <i>text</i> will be shown here <i>this</i> is the first paragraph</p>';
 
         // this seems to break something
         update_option('use_smilies', false);

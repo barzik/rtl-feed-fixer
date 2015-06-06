@@ -2,7 +2,7 @@
 Contributors: barzik
 Tags: rtl, rss, feed, feedly, fix, rtl support
 Requires at least: 3.5.1
-Tested up to: 4.0
+Tested up to: 4.2.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -19,7 +19,7 @@ After activating RSS Feed Fixer all the paragraph elements in the content or the
 and will be aligned to the right.
 
 This plugin does not have admin interface and it is very easy to use. Please pay attention that feedly and other RSS 
-readers sometime cache the feeds, so the it is possible that the changes will be seen in the posts that are being 
+readers sometime cache the feeds, so it is possible that the changes will be seen in the posts that are being
 published after the plugin activation.
 
 The plugin is also available at GitHub: https://github.com/barzik/rtl-feed-fixer
