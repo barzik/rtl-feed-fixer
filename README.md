@@ -2,7 +2,7 @@
 Contributors: barzik
 Tags: rtl, rss, feed,
 Requires at least: 3.5.1
-Tested up to: 4.2.2
+Tested up to: 4.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -47,6 +47,9 @@ published after the plugin activation.
 4. Activate the plugin in the Plugin dashboard
 
 ## Changelog ##
+
+### 1.0.2 
+* Adding TravisCI support.
 
 ### 1.0.1 
 * fixed typo class name in add_rtl_to_p
