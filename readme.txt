@@ -2,7 +2,7 @@
 Contributors: barzik
 Tags: rtl, rss, feed, feedly, fix, rtl support
 Requires at least: 3.5.1
-Tested up to: 4.2.2
+Tested up to: 4.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -57,6 +57,9 @@ The plugin is also available at GitHub: https://github.com/barzik/rtl-feed-fixer
 2. Feedly example: after.
 
 == Changelog ==
+
+= 1.0.2 =
+* Adding TravisCI support.
 
 = 1.0.1 =
 * fixed typo class name in add_rtl_to_p

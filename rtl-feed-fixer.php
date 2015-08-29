@@ -12,7 +12,7 @@
  * Plugin Name:       RTL RSS Feed Fixer
  * Plugin URI:        http://internet-israel.com
  * Description:       Allowing RTL feed support for all RSS readers
- * Version:           1.0.2
+ * Version:           1.0.3
  * Author:            Ran Bar-Zik <ran@bar-zik.com>
  * Author URI:        http://internet-israel.com
  * Text Domain:       rtl-feed-fixer
@@ -85,7 +85,7 @@ class RtlFeedFixer {
             $content = mb_convert_encoding( $content, 'utf-8', mb_detect_encoding( $content ) );
             $content = mb_convert_encoding( $content, 'html-entities', 'utf-8' );
             $dom = new DOMDocument();
-            $dom->loadHTML( $content,  LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
+            $dom->loadXML( $content );
             $x = new DOMXPath( $dom );
 
             foreach( $x->query( "//p" ) as $node ) {
