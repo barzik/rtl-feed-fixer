@@ -85,7 +85,7 @@ class RtlFeedFixer {
             $content = mb_convert_encoding( $content, 'utf-8', mb_detect_encoding( $content ) );
             $content = mb_convert_encoding( $content, 'html-entities', 'utf-8' );
             $dom = new DOMDocument();
-            $dom->loadHTML( $content,  LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
+            $dom->loadXML( $content );
             $x = new DOMXPath( $dom );
 
             foreach( $x->query( "//p" ) as $node ) {
